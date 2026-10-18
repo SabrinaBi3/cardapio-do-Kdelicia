@@ -5,28 +5,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kdelícia - Cardápios</title>
+    <title>Kdelícia | Cardápio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- CABEÇALHO E LOGO PROVISÓRIA -->
     <header class="cabecalho">
-        <h1>K<span>delícia</span></h1>
-        <p>O sabor que conquista!</p>
+
+        <div class="logo-area">
+            <!-- LOGO FICTÍCIA: substitua pela oficial futuramente -->
+            <div class="logo-ficticia">
+                <span class="logo-k">K</span>
+                <div class="logo-texto">
+                    <span class="logo-nome">KDELÍCIA</span>
+                    <span class="logo-slogan">SABOR QUE CONQUISTA</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="frase-cabecalho">O sabor que conquista!</p>
 
         <nav>
             <a href="#porcoes">Porções</a>
             <a href="#doces">Hambúrgueres doces</a>
             <a href="#sucos">Sucos</a>
         </nav>
+
     </header>
 
     <main>
 
-        <!-- CARDÁPIO DE PORÇÕES -->
-        <section class="cardapio" id="porcoes">
+        <!-- ================= PORÇÕES ================= -->
+        <section class="cardapio porcoes" id="porcoes">
+
             <div class="titulo">
-                <p>PARA COMPARTILHAR</p>
+                <p class="subtitulo">PARA COMPARTILHAR</p>
                 <h2>Porções</h2>
                 <span>Petiscos deliciosos para todos os momentos!</span>
             </div>
@@ -34,7 +49,9 @@
             <div class="produtos">
 
                 <article class="produto">
-                    <img src="imagens/batata-bacon.jpg" alt="Batata com queijo e bacon">
+                    <img src="imagens/batata-bacon.jpg"
+                         alt="Batata com queijo e bacon">
+
                     <div class="informacoes">
                         <h3>Batata com queijo e bacon</h3>
                         <p>Batata frita com queijo derretido, bacon e alface.</p>
@@ -43,7 +60,9 @@
                 </article>
 
                 <article class="produto">
-                    <img src="imagens/pao-calabresa.jpg" alt="Pão com calabresa">
+                    <img src="imagens/pao-calabresa.jpg"
+                         alt="Pão com calabresa">
+
                     <div class="informacoes">
                         <h3>Pão com calabresa</h3>
                         <p>Pão acompanhado de calabresa e alface.</p>
@@ -52,7 +71,9 @@
                 </article>
 
                 <article class="produto">
-                    <img src="imagens/tilapia.jpg" alt="Porção de tilápia">
+                    <img src="imagens/tilapia.jpg"
+                         alt="Porção de tilápia">
+
                     <div class="informacoes">
                         <h3>Tilápia</h3>
                         <p>Tilápia acompanhada de alface e limão.</p>
@@ -63,10 +84,12 @@
             </div>
         </section>
 
-        <!-- CARDÁPIO DE HAMBÚRGUERES DOCES -->
+
+        <!-- ============== HAMBÚRGUERES DOCES ============== -->
         <section class="cardapio doces" id="doces">
+
             <div class="titulo">
-                <p>UMA DOSE DE DOÇURA</p>
+                <p class="subtitulo">UMA DOSE DE DOÇURA</p>
                 <h2>Hambúrgueres doces</h2>
                 <span>Combinações irresistíveis para adoçar seu dia!</span>
             </div>
@@ -74,7 +97,9 @@
             <div class="produtos">
 
                 <article class="produto">
-                    <img src="imagens/doce-pacoca.jpg" alt="Doce de leite condensado com paçoca">
+                    <img src="imagens/doce-pacoca.jpg"
+                         alt="Hambúrguer doce de paçoca">
+
                     <div class="informacoes">
                         <h3>Leite condensado com paçoca</h3>
                         <p>Leite condensado combinado com paçoca.</p>
@@ -83,7 +108,9 @@
                 </article>
 
                 <article class="produto">
-                    <img src="imagens/doce-morango.jpg" alt="Doce de morango com chocolate">
+                    <img src="imagens/doce-morango.jpg"
+                         alt="Hambúrguer doce de morango">
+
                     <div class="informacoes">
                         <h3>Morango com chocolate</h3>
                         <p>Morango, leite condensado e chocolate.</p>
@@ -92,7 +119,9 @@
                 </article>
 
                 <article class="produto">
-                    <img src="imagens/doce-banana.jpg" alt="Doce de banana com chocolate">
+                    <img src="imagens/doce-banana.jpg"
+                         alt="Hambúrguer doce de banana">
+
                     <div class="informacoes">
                         <h3>Banana com chocolate</h3>
                         <p>Banana com chocolate e calda de chocolate.</p>
@@ -101,7 +130,9 @@
                 </article>
 
                 <article class="produto">
-                    <img src="imagens/doce-abacaxi.jpg" alt="Doce de abacaxi com chocolate">
+                    <img src="imagens/doce-abacaxi.jpg"
+                         alt="Hambúrguer doce de abacaxi">
+
                     <div class="informacoes">
                         <h3>Abacaxi com chocolate</h3>
                         <p>Abacaxi, chocolate em pó, calda de chocolate e leite condensado.</p>
@@ -112,68 +143,65 @@
             </div>
         </section>
 
-        <!-- CARDÁPIO DE SUCOS -->
+
+        <!-- ================== SUCOS ================== -->
         <section class="cardapio sucos" id="sucos">
+
             <div class="titulo">
-                <p>REFRESCÂNCIA A CADA GOLE</p>
+                <p class="subtitulo">REFRESCÂNCIA A CADA GOLE</p>
                 <h2>Sucos</h2>
                 <span>Escolha seu sabor favorito!</span>
             </div>
 
-            <div class="produtos">
+            <!-- Quatro imagens independentes, com tamanho igual -->
+            <div class="imagens-sucos">
 
-                <article class="produto">
-                    <img src="imagens/suco-morango.jpg" alt="Suco de morango">
-                    <div class="informacoes">
-                        <h3>Morango</h3>
-                        <p>Disponível com água ou leite.</p>
-                        <strong>R$ 12,00</strong>
-                    </div>
-                </article>
+                <div class="imagem-suco">
+                    <img src="imagens/sucos-1.jpg"
+                         alt="Cardápio de sucos - imagem 1">
+                </div>
 
-                <article class="produto">
-                    <img src="imagens/suco-coco.jpg" alt="Suco de coco">
-                    <div class="informacoes">
-                        <h3>Coco</h3>
-                        <p>Disponível com água ou leite.</p>
-                        <strong>R$ 12,00</strong>
-                    </div>
-                </article>
+                <div class="imagem-suco">
+                    <img src="imagens/sucos-2.jpg"
+                         alt="Cardápio de sucos - imagem 2">
+                </div>
 
-                <article class="produto">
-                    <img src="imagens/suco-maracuja.jpg" alt="Suco de maracujá">
-                    <div class="informacoes">
-                        <h3>Maracujá</h3>
-                        <p>Disponível com água ou leite.</p>
-                        <strong>R$ 12,00</strong>
-                    </div>
-                </article>
+                <div class="imagem-suco">
+                    <img src="imagens/sucos-3.jpg"
+                         alt="Cardápio de sucos - imagem 3">
+                </div>
 
-                <article class="produto">
-                    <img src="imagens/suco-laranja.jpg" alt="Suco de laranja">
-                    <div class="informacoes">
-                        <h3>Laranja</h3>
-                        <p>Disponível com água ou leite.</p>
-                        <strong>R$ 12,00</strong>
-                    </div>
-                </article>
-
-                <article class="produto">
-                    <img src="imagens/suco-uva.jpg" alt="Suco de uva">
-                    <div class="informacoes">
-                        <h3>Uva</h3>
-                        <p>Disponível com água ou leite.</p>
-                        <strong>R$ 12,00</strong>
-                    </div>
-                </article>
+                <div class="imagem-suco">
+                    <img src="imagens/sucos-4.jpg"
+                         alt="Cardápio de sucos - imagem 4">
+                </div>
 
             </div>
+
+            <div class="sabores-sucos">
+                <h3>Sabores disponíveis</h3>
+
+                <p class="lista-sabores">
+                    Morango <span>•</span>
+                    Coco <span>•</span>
+                    Maracujá <span>•</span>
+                    Laranja <span>•</span>
+                    Uva
+                </p>
+
+                <p>Disponíveis com água ou leite.</p>
+
+                <strong>R$ 12,00</strong>
+            </div>
+
         </section>
 
     </main>
 
+
+    <!-- RODAPÉ -->
     <footer>
-        <h2>Kdelícia</h2>
+        <div class="logo-rodape">K<span>delícia</span></div>
         <p>Obrigado pela preferência!</p>
     </footer>
 
