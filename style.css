@@ -1,9 +1,10 @@
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap');
 
-/* ========== CONFIGURAÇÕES GERAIS ========== */
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
 
 * {
     margin: 0;
@@ -11,15 +12,28 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+:root {
+    --preto: #080808;
+    --painel: #151515;
+    --branco: #fffaf4;
+    --cinza: #c9c4be;
+    --laranja: #ff8500;
+    --amarelo: #ffd21c;
+    --vermelho: #ed1725;
+    --rosa: #ff2874;
 }
 
 body {
-    background: #111111;
-    color: #f8f5ed;
-    font-family: 'DM Sans', sans-serif;
+    background:
+        radial-gradient(ellipse at top, #29130b 0%, #080808 65%);
+    color: var(--branco);
+    font-family: "DM Sans", Arial, sans-serif;
     line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 img {
@@ -27,288 +41,494 @@ img {
 }
 
 
-/* ========== CABEÇALHO ========== */
+/* =========================
+   CABEÇALHO
+========================= */
 
 .cabecalho {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 0.65fr;
+    align-items: center;
+    gap: 30px;
+
+    padding: 30px 5%;
+    min-height: 270px;
+
+    background:
+        linear-gradient(120deg, #050505, #1b100b, #080808);
+
+    border-bottom: 4px solid var(--laranja);
+    box-shadow: 0 8px 30px #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.cabecalho::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 20% 50%, #ff850015, transparent 35%),
+        radial-gradient(circle at 85% 30%, #ed172515, transparent 30%);
+}
+
+.marca,
+.contatos,
+.motoboy {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* LOGO */
+
+.marca {
     text-align: center;
-    padding: 28px 20px 25px;
-    background: linear-gradient(180deg, #080808, #1c100a);
-    border-bottom: 4px solid #f58220;
 }
 
-/* ESPAÇO DA LOGO */
+.logo {
+    display: block;
+    width: 100%;
+    max-width: 430px;
+    max-height: 175px;
+    object-fit: contain;
+    margin: 0 auto;
 
-.logo-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.logo-ficticia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 12px 22px;
-    border: 3px solid #ffd447;
-    border-radius: 12px;
-    background: #15100c;
-    box-shadow: 0 0 18px #f5822030;
-}
-
-.logo-k {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    background: #d83227;
-    border: 3px solid #ffd447;
-    color: #ffd447;
-    font-family: 'Oswald', sans-serif;
-    font-size: 46px;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.logo-texto {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.logo-nome {
-    color: #ffd447;
-    font-family: 'Oswald', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.1;
-}
-
-.logo-slogan {
-    color: #ffffff;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+    filter:
+        drop-shadow(0 0 5px #ff8500)
+        drop-shadow(0 0 12px #ed172555);
 }
 
 .frase-cabecalho {
-    margin: 8px 0 22px;
-    color: #cccccc;
+    margin-top: 10px;
+    color: var(--amarelo);
+
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* CONTATOS */
+
+.contatos {
+    border-left: 2px solid #ff850077;
+    padding-left: 25px;
+}
+
+.chamada-delivery {
+    margin-bottom: 15px;
+
     font-size: 15px;
-}
-
-/* NAVEGAÇÃO */
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    background: #252525;
-    border: 1px solid #f58220;
-    padding: 11px 20px;
-    border-radius: 5px;
-    font-size: 14px;
     font-weight: 700;
-    transition: background-color 0.2s;
+    text-transform: uppercase;
 }
 
-nav a:hover {
-    background: #d83227;
+.chamada-delivery strong {
+    display: block;
+
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 1.1;
+
+    color: var(--amarelo);
+    text-shadow: 2px 3px 0 #8b2600;
+    letter-spacing: 1px;
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 13px 0;
+}
+
+.icone {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: #1a1a1a;
+    border: 1px solid #484039;
+    border-radius: 12px;
+
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.whatsapp .icone {
+    color: #35dc76;
+}
+
+.instagram .icone {
+    color: #ff4b91;
+}
+
+.endereco .icone {
+    color: var(--amarelo);
+}
+
+.contato small {
+    display: block;
+    color: #bdb7b0;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+
+.contato strong {
+    display: block;
+    color: white;
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.contato:hover strong {
+    color: var(--amarelo);
 }
 
 
-/* ========== SEÇÕES DOS CARDÁPIOS ========== */
+/* MOTOBOY */
+
+.motoboy {
+    text-align: center;
+    padding: 22px 12px;
+
+    background: linear-gradient(145deg, #20150b, #0c0c0c);
+    border: 1px dashed #ff850099;
+    border-radius: 20px;
+
+    transform: rotate(1deg);
+    box-shadow: 0 8px 20px #0008;
+}
+
+.moto {
+    font-size: 65px;
+    line-height: 1.3;
+    filter: drop-shadow(0 0 12px #ff850066);
+}
+
+.motoboy strong {
+    display: block;
+    color: var(--amarelo);
+
+    font-family: "Oswald", sans-serif;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.motoboy span {
+    color: #ddd;
+    font-size: 12px;
+}
+
+
+/* =========================
+   ÁREA DO CARDÁPIO
+========================= */
 
 .cardapio {
-    max-width: 1200px;
-    margin: 55px auto;
-    padding: 35px;
-    background: linear-gradient(145deg, #211812, #151515 70%);
-    border: 1px solid #493020;
-    border-top: 6px solid #f58220;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px #0008;
-    scroll-margin-top: 20px;
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 28px 35px;
 }
 
-/* Mais espaço entre os temas */
 
-.cardapio + .cardapio {
-    margin-top: 75px;
+/* CADA CATEGORIA TEM SEU PRÓPRIO PAINEL */
+
+.secao {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.75fr) minmax(0, 2.3fr);
+    align-items: center;
+    gap: 25px;
+
+    padding: 25px;
+    margin-bottom: 32px;
+
+    background:
+        linear-gradient(145deg, #191919, #0c0c0c);
+
+    border: 1px solid #ffffff20;
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 30px #0009,
+        inset 0 1px #ffffff08;
+
+    position: relative;
+    overflow: hidden;
 }
+
+.secao::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+
+    background: var(--laranja);
+}
+
+
+/* CORES DIFERENTES PARA CADA SEÇÃO */
 
 .porcoes {
-    border-top-color: #f58220;
+    border-color: #ff850066;
+}
+
+.porcoes::before {
+    background: var(--laranja);
 }
 
 .doces {
-    border-top-color: #d83227;
-    background: linear-gradient(145deg, #261416, #151515 70%);
+    border-color: #ff287466;
+}
+
+.doces::before {
+    background: var(--rosa);
 }
 
 .sucos {
-    border-top-color: #e8b92d;
-    background: linear-gradient(145deg, #192019, #151515 70%);
+    border-color: #ffd21c66;
 }
 
-/* TÍTULOS */
+.sucos::before {
+    background: var(--amarelo);
+}
+
+
+/* =========================
+   TÍTULOS DAS CATEGORIAS
+========================= */
 
 .titulo {
-    text-align: center;
-    margin-bottom: 35px;
-    padding-bottom: 25px;
-    border-bottom: 2px dashed #68432b;
+    padding: 15px 5px 15px 10px;
+    align-self: center;
 }
 
-.titulo .subtitulo {
-    color: #f58220;
-    font-size: 12px;
+.subtitulo {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--laranja);
+    font-size: 11px;
     font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .titulo h2 {
-    color: #ffd447;
-    font-family: 'Oswald', sans-serif;
-    font-size: 44px;
-    line-height: 1.2;
+    margin-bottom: 12px;
+
+    color: white;
+    font-family: "Oswald", Impact, sans-serif;
+    font-size: clamp(38px, 4.5vw, 62px);
+    line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    letter-spacing: -1px;
+
+    text-shadow: 3px 4px 0 #000;
 }
 
-.titulo span {
-    color: #cccccc;
+.titulo p {
+    max-width: 270px;
+    color: var(--cinza);
     font-size: 14px;
+    line-height: 1.6;
 }
 
-.doces .titulo .subtitulo {
-    color: #ff998f;
+.decoracao {
+    display: inline-block;
+    margin-top: 15px;
+
+    color: var(--laranja);
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+
+/* TÍTULO ROSA PARA OS DOCES */
+
+.doces .subtitulo,
+.doces .decoracao {
+    color: var(--rosa);
 }
 
 .doces .titulo h2 {
-    color: #ffb7ad;
+    font-size: clamp(31px, 3.5vw, 47px);
 }
 
-.sucos .titulo .subtitulo {
-    color: #a8d68b;
+.doces .titulo h2 em {
+    display: block;
+    margin-top: 5px;
+
+    color: var(--rosa);
+    font-size: 1.25em;
+    font-style: normal;
+}
+
+
+/* TÍTULO AMARELO PARA OS SUCOS */
+
+.sucos .subtitulo,
+.sucos .decoracao {
+    color: var(--amarelo);
 }
 
 .sucos .titulo h2 {
-    color: #e8c95c;
+    color: var(--amarelo);
+    font-size: clamp(45px, 5vw, 68px);
 }
 
 
-/* ========== CARDS DOS PRODUTOS ========== */
+/* =========================
+   CARTÕES DOS PRODUTOS
+========================= */
 
 .produtos {
     display: grid;
+    gap: 15px;
+    min-width: 0;
+}
+
+.produtos.tres {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-    align-items: stretch;
+}
+
+.produtos.quatro {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .produto {
     min-width: 0;
+    overflow: hidden;
+
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    background: #252525;
-    border: 1px solid #49382d;
-    border-radius: 8px;
-    box-shadow: 0 5px 14px #0006;
+
+    background: linear-gradient(180deg, #202020, #101010);
+    border: 1px solid #ffffff22;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 14px #0007;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    border-color: var(--laranja);
+    box-shadow: 0 10px 25px #ff850022;
 }
 
 .produto img {
     display: block;
     width: 100%;
-    height: 220px;
+    height: 175px;
+
     object-fit: cover;
-    background: #333333;
+    background: #20150e;
+
+    border-bottom: 3px solid var(--laranja);
+}
+
+.doces .produto img {
+    border-bottom-color: var(--rosa);
 }
 
 .informacoes {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 18px;
+
+    padding: 15px;
 }
 
 .informacoes h3 {
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
-    font-size: 22px;
-    line-height: 1.3;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
+
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(15px, 1.5vw, 20px);
+    line-height: 1.25;
 }
 
 .informacoes p {
     flex: 1;
-    color: #cccccc;
-    font-size: 14px;
+    margin-bottom: 17px;
+
+    color: #c9c4be;
+    font-size: 12px;
     line-height: 1.6;
-    margin-bottom: 18px;
 }
 
-.informacoes strong {
-    align-self: flex-start;
+
+/* PREÇOS DESTACADOS */
+
+.preco {
     display: inline-block;
-    padding: 9px 15px;
-    color: #ffffff;
-    background: #d83227;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 800;
+    align-self: flex-start;
+
+    padding: 8px 15px;
+
+    background: var(--vermelho);
+    color: white;
+
+    border-radius: 7px 15px 7px 15px;
+    box-shadow: 0 4px 0 #930c13;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
-.doces .produto {
-    border-color: #61312d;
-}
-
-.doces .informacoes strong {
-    background: #a9232a;
-}
-
-.porcoes .informacoes strong {
-    background: #c94d13;
+.doces .preco {
+    background: linear-gradient(90deg, #d90d43, #ff2874);
+    box-shadow: 0 4px 0 #890c2a;
 }
 
 
-/* ========== IMAGENS DOS SUCOS ========== */
+/* =========================
+   SEÇÃO DOS SUCOS
+========================= */
+
+.conteudo-sucos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+}
 
 .imagens-sucos {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    width: 100%;
-    max-width: 1050px;
-    margin: 0 auto 35px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
 }
 
-/* Todas as caixas possuem exatamente o mesmo tamanho */
-
 .imagem-suco {
-    width: 100%;
-    height: 320px;
+    height: 170px;
     min-width: 0;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
-    background: #101510;
-    border: 2px solid #62794c;
-    border-radius: 8px;
+
+    border: 2px solid #bd8b00;
+    border-radius: 13px;
+
+    background: #171208;
+    box-shadow: 0 5px 15px #0008;
 }
 
 .imagem-suco img {
@@ -316,186 +536,302 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center;
 }
 
-/* ========== INFORMAÇÕES DOS SUCOS ========== */
+
+/* INFORMAÇÕES DOS SABORES */
 
 .sabores-sucos {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 28px;
+    padding: 20px;
     text-align: center;
-    background: #171b15;
-    border: 1px solid #62794c;
-    border-radius: 8px;
+
+    background: linear-gradient(110deg, #21190a, #111, #21190a);
+    border: 1px solid var(--laranja);
+    border-radius: 15px;
 }
 
 .sabores-sucos h3 {
-    margin-bottom: 18px;
-    color: #e8c95c;
-    font-family: 'Oswald', sans-serif;
-    font-size: 25px;
-    text-transform: uppercase;
-}
+    margin-bottom: 10px;
 
-.sabores-sucos p {
-    margin: 12px 0;
-    color: #eeeeee;
-    font-size: 15px;
+    color: var(--laranja);
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
 }
 
 .lista-sabores {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
     line-height: 2;
 }
 
 .lista-sabores span {
-    padding: 0 5px;
-    color: #e8c95c;
+    padding: 0 4px;
+    color: var(--amarelo);
 }
 
-.sabores-sucos strong {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 10px 20px;
-    color: #ffffff;
-    background: #a9232a;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-
-/* ========== RODAPÉ ========== */
-
-footer {
-    margin-top: 70px;
-    padding: 30px 20px;
-    text-align: center;
-    background: #080808;
-    border-top: 3px solid #f58220;
-}
-
-.logo-rodape {
-    color: #ffd447;
-    font-family: 'Oswald', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.logo-rodape span {
-    color: #ffffff;
-}
-
-footer p {
-    margin-top: 8px;
-    color: #cccccc;
+.opcoes-sucos {
+    margin-top: 4px;
+    color: #c9c4be;
     font-size: 13px;
 }
 
+.preco-suco {
+    margin-top: 14px;
+    background: var(--amarelo);
+    color: #171006;
+    box-shadow: 0 4px 0 #a66b00;
+}
 
-/* ========== TABLETS ========== */
 
-@media (max-width: 850px) {
-    .cardapio {
-        margin: 35px 18px;
-        padding: 25px;
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 22px;
+
+    padding: 30px 5%;
+
+    background: #050505;
+    border-top: 4px solid var(--laranja);
+    box-shadow: 0 -8px 25px #0008;
+    text-align: center;
+}
+
+.logo-rodape {
+    color: var(--amarelo);
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.logo-rodape span {
+    color: white;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.logo-rodape small {
+    display: block;
+    margin-top: 6px;
+
+    color: var(--laranja);
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.mensagem-rodape h3 {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.mensagem-rodape p {
+    margin-top: 5px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding-left: 18px;
+    border-left: 1px solid #60451d;
+
+    text-align: left;
+}
+
+.beneficio span {
+    color: var(--amarelo);
+    font-size: 28px;
+}
+
+.beneficio p {
+    color: #ddd;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1050px) {
+
+    .cabecalho {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
     }
 
-    .cardapio + .cardapio {
-        margin-top: 50px;
+    .motoboy {
+        grid-column: 1 / -1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+
+        padding: 12px;
     }
 
-    .produtos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .moto {
+        font-size: 42px;
     }
 
-    .imagem-suco {
-        height: 280px;
+    .secao {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .titulo {
+        padding: 5px;
+    }
+
+    .titulo p {
+        max-width: 100%;
+    }
+
+    .produtos.tres {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .produtos.quatro {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
 
-/* ========== CELULARES ========== */
+/* =========================
+   CELULARES
+========================= */
 
-@media (max-width: 520px) {
+@media (max-width: 650px) {
+
     .cabecalho {
-        padding: 22px 12px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 25px 18px;
     }
 
-    .logo-ficticia {
-        gap: 8px;
-        padding: 10px 13px;
+    .logo {
+        max-height: 145px;
     }
 
-    .logo-k {
-        width: 52px;
-        height: 52px;
-        font-size: 36px;
+    .contatos {
+        padding: 18px 0 0;
+        border-left: none;
+        border-top: 1px solid #ff850066;
     }
 
-    .logo-nome {
-        font-size: 28px;
+    .chamada-delivery {
+        text-align: center;
     }
 
-    .logo-slogan {
-        font-size: 7px;
-        letter-spacing: 1px;
-    }
-
-    nav {
-        gap: 8px;
-    }
-
-    nav a {
-        padding: 9px 11px;
-        font-size: 12px;
+    .motoboy {
+        grid-column: auto;
     }
 
     .cardapio {
-        margin: 28px 10px;
-        padding: 22px 14px;
+        padding: 16px 10px;
     }
 
-    .cardapio + .cardapio {
-        margin-top: 40px;
+    .secao {
+        padding: 16px 12px;
+        margin-bottom: 20px;
+        gap: 18px;
+        border-radius: 16px;
     }
 
     .titulo h2 {
-        font-size: 32px;
+        font-size: 43px;
     }
 
-    .titulo .subtitulo {
-        font-size: 10px;
-        letter-spacing: 2px;
+    .doces .titulo h2 {
+        font-size: 36px;
     }
 
-    .produtos {
-        grid-template-columns: 1fr;
-        gap: 22px;
+    .sucos .titulo h2 {
+        font-size: 48px;
+    }
+
+    .produtos.tres,
+    .produtos.quatro {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
     .produto img {
-        height: 230px;
+        height: 125px;
     }
 
-    /* As quatro imagens ficam iguais também no celular */
+    .informacoes {
+        padding: 11px;
+    }
+
+    .informacoes h3 {
+        font-size: 16px;
+    }
+
+    .informacoes p {
+        font-size: 11px;
+    }
+
+    .preco {
+        padding: 7px 10px;
+        font-size: 17px;
+    }
+
     .imagens-sucos {
-        grid-template-columns: 1fr;
-        gap: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
     .imagem-suco {
-        width: 100%;
-        height: 280px;
+        height: 140px;
     }
 
     .sabores-sucos {
-        padding: 22px 14px;
+        padding: 16px 10px;
     }
 
-    .lista-sabores span {
-        padding: 0 2px;
+    .lista-sabores {
+        font-size: 13px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        padding: 25px 15px;
+    }
+
+    .beneficio {
+        padding: 0;
+        border-left: none;
+        text-align: center;
+    }
+}
+
+
+/* CELULARES MUITO PEQUENOS */
+
+@media (max-width: 360px) {
+
+    .produtos.tres,
+    .produtos.quatro {
+        grid-template-columns: 1fr;
+    }
+
+    .produto img {
+        height: 190px;
     }
 }
 
