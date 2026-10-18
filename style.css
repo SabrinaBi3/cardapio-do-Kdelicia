@@ -1,5 +1,8 @@
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap');
+
+/* ========== CONFIGURAÇÕES GERAIS ========== */
 
 * {
     margin: 0;
@@ -12,288 +15,485 @@ html {
 }
 
 body {
-    background-color: #111111;
+    background: #111111;
     color: #f8f5ed;
     font-family: 'DM Sans', sans-serif;
+    line-height: 1.5;
 }
 
-/* CABEÇALHO */
+img {
+    max-width: 100%;
+}
+
+
+/* ========== CABEÇALHO ========== */
 
 .cabecalho {
     text-align: center;
-    padding: 30px 20px;
-    background-color: #080808;
+    padding: 28px 20px 25px;
+    background: linear-gradient(180deg, #080808, #1c100a);
     border-bottom: 4px solid #f58220;
 }
 
-.cabecalho h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 55px;
+/* ESPAÇO DA LOGO */
+
+.logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.logo-ficticia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 22px;
+    border: 3px solid #ffd447;
+    border-radius: 12px;
+    background: #15100c;
+    box-shadow: 0 0 18px #f5822030;
+}
+
+.logo-k {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #d83227;
+    border: 3px solid #ffd447;
     color: #ffd447;
-    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1;
 }
 
-.cabecalho h1 span {
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.logo-nome {
+    color: #ffd447;
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.logo-slogan {
     color: #ffffff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
 }
 
-.cabecalho p {
+.frase-cabecalho {
+    margin: 8px 0 22px;
     color: #cccccc;
-    margin: 8px 0 25px;
+    font-size: 15px;
 }
+
+/* NAVEGAÇÃO */
 
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 12px;
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    background-color: #252525;
+    background: #252525;
     border: 1px solid #f58220;
-    padding: 10px 18px;
+    padding: 11px 20px;
     border-radius: 5px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.2s;
 }
 
 nav a:hover {
-    background-color: #d83227;
+    background: #d83227;
 }
 
-/* TÍTULO PRINCIPAL DE CADA CARDÁPIO */
+
+/* ========== SEÇÕES DOS CARDÁPIOS ========== */
 
 .cardapio {
-    max-width: 1150px;
-    margin: 35px auto;
+    max-width: 1200px;
+    margin: 55px auto;
     padding: 35px;
-    background-color: #1a1a1a;
-    border-top: 5px solid #f58220;
-    border-radius: 8px;
+    background: linear-gradient(145deg, #211812, #151515 70%);
+    border: 1px solid #493020;
+    border-top: 6px solid #f58220;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px #0008;
+    scroll-margin-top: 20px;
 }
+
+/* Mais espaço entre os temas */
+
+.cardapio + .cardapio {
+    margin-top: 75px;
+}
+
+.porcoes {
+    border-top-color: #f58220;
+}
+
+.doces {
+    border-top-color: #d83227;
+    background: linear-gradient(145deg, #261416, #151515 70%);
+}
+
+.sucos {
+    border-top-color: #e8b92d;
+    background: linear-gradient(145deg, #192019, #151515 70%);
+}
+
+/* TÍTULOS */
 
 .titulo {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 2px dashed #68432b;
 }
 
-.titulo p {
-    color: #ffd447;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.titulo .subtitulo {
+    color: #f58220;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
     margin-bottom: 8px;
 }
 
 .titulo h2 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
     color: #ffd447;
-    font-size: 42px;
-    margin-bottom: 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 44px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .titulo span {
     color: #cccccc;
-}
-
-/* ORGANIZAÇÃO DOS PRODUTOS */
-
-.produtos {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.produto {
-    background-color: #252525;
-    border: 1px solid #40382e;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.produto img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    display: block;
-    background-color: #333333;
-}
-
-.informacoes {
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.informacoes h3 {
-    font-family: 'Oswald', sans-serif;
-    color: #ffffff;
-    font-size: 23px;
-    line-height: 1.2;
-    margin-bottom: 10px;
-}
-
-.informacoes p {
-    color: #cccccc;
-    line-height: 1.5;
     font-size: 14px;
-    margin-bottom: 18px;
-    flex: 1;
 }
 
-.informacoes strong {
-    align-self: flex-start;
-    background-color: #d83227;
-    color: white;
-    padding: 9px 14px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* CARDÁPIO DE DOCES */
-
-.doces {
-    border-top-color: #d83227;
+.doces .titulo .subtitulo {
+    color: #ff998f;
 }
 
 .doces .titulo h2 {
     color: #ffb7ad;
 }
 
-```css
-/* IMAGENS DO CARDÁPIO DE SUCOS */
+.sucos .titulo .subtitulo {
+    color: #a8d68b;
+}
+
+.sucos .titulo h2 {
+    color: #e8c95c;
+}
+
+
+/* ========== CARDS DOS PRODUTOS ========== */
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.produto {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #252525;
+    border: 1px solid #49382d;
+    border-radius: 8px;
+    box-shadow: 0 5px 14px #0006;
+}
+
+.produto img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #333333;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px;
+}
+
+.informacoes h3 {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.informacoes p {
+    flex: 1;
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.informacoes strong {
+    align-self: flex-start;
+    display: inline-block;
+    padding: 9px 15px;
+    color: #ffffff;
+    background: #d83227;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.doces .produto {
+    border-color: #61312d;
+}
+
+.doces .informacoes strong {
+    background: #a9232a;
+}
+
+.porcoes .informacoes strong {
+    background: #c94d13;
+}
+
+
+/* ========== IMAGENS DOS SUCOS ========== */
+
 .imagens-sucos {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
-    max-width: 1000px;
-    margin: 30px auto;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto 35px;
 }
 
+/* Todas as caixas possuem exatamente o mesmo tamanho */
+
 .imagem-suco {
-    background-color: #222;
-    border: 2px solid #d87943;
-    border-radius: 15px;
+    width: 100%;
+    height: 320px;
+    min-width: 0;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+    background: #101510;
+    border: 2px solid #62794c;
+    border-radius: 8px;
 }
 
 .imagem-suco img {
     display: block;
     width: 100%;
-    height: 320px;
+    height: 100%;
     object-fit: contain;
-    border-radius: 10px;
+    object-position: center;
 }
 
+/* ========== INFORMAÇÕES DOS SUCOS ========== */
+
 .sabores-sucos {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 28px;
     text-align: center;
-    margin: 30px auto;
-    padding: 25px;
-    max-width: 800px;
-    background-color: #222;
-    border-radius: 15px;
+    background: #171b15;
+    border: 1px solid #62794c;
+    border-radius: 8px;
 }
 
 .sabores-sucos h3 {
-    color: #d87943;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    color: #e8c95c;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
 }
 
 .sabores-sucos p {
     margin: 12px 0;
-    line-height: 1.6;
+    color: #eeeeee;
+    font-size: 15px;
+}
+
+.lista-sabores {
+    line-height: 2;
+}
+
+.lista-sabores span {
+    padding: 0 5px;
+    color: #e8c95c;
 }
 
 .sabores-sucos strong {
     display: inline-block;
-    margin-top: 10px;
-    color: #ffd166;
-    font-size: 1.2rem;
+    margin-top: 12px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background: #a9232a;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
-/* Adaptação para celular */
-@media (max-width: 650px) {
-    .imagens-sucos {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
 
-    .imagem-suco img {
-        height: auto;
-        max-height: 350px;
-    }
-}
-```
-
-/* RODAPÉ */
+/* ========== RODAPÉ ========== */
 
 footer {
-    text-align: center;
+    margin-top: 70px;
     padding: 30px 20px;
-    background-color: #080808;
-    border-top: 2px solid #f58220;
+    text-align: center;
+    background: #080808;
+    border-top: 3px solid #f58220;
 }
 
-footer h2 {
+.logo-rodape {
+    color: #ffd447;
     font-family: 'Oswald', sans-serif;
     font-size: 30px;
-    color: #ffd447;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.logo-rodape span {
+    color: #ffffff;
 }
 
 footer p {
     margin-top: 8px;
     color: #cccccc;
+    font-size: 13px;
 }
 
-/* TABLETS */
+
+/* ========== TABLETS ========== */
 
 @media (max-width: 850px) {
     .cardapio {
-        margin: 25px 15px;
+        margin: 35px 18px;
         padding: 25px;
     }
 
-    .produtos,
-    .sucos .produtos {
+    .cardapio + .cardapio {
+        margin-top: 50px;
+    }
+
+    .produtos {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .imagem-suco {
+        height: 280px;
     }
 }
 
-/* CELULARES */
+
+/* ========== CELULARES ========== */
 
 @media (max-width: 520px) {
-    .cabecalho h1 {
-        font-size: 42px;
+    .cabecalho {
+        padding: 22px 12px;
+    }
+
+    .logo-ficticia {
+        gap: 8px;
+        padding: 10px 13px;
+    }
+
+    .logo-k {
+        width: 52px;
+        height: 52px;
+        font-size: 36px;
+    }
+
+    .logo-nome {
+        font-size: 28px;
+    }
+
+    .logo-slogan {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 9px 11px;
+        font-size: 12px;
     }
 
     .cardapio {
-        margin: 20px 10px;
-        padding: 20px 14px;
+        margin: 28px 10px;
+        padding: 22px 14px;
+    }
+
+    .cardapio + .cardapio {
+        margin-top: 40px;
     }
 
     .titulo h2 {
         font-size: 32px;
     }
 
-    .produtos,
-    .sucos .produtos {
+    .titulo .subtitulo {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .produtos {
         grid-template-columns: 1fr;
+        gap: 22px;
     }
 
     .produto img {
-        height: 220px;
+        height: 230px;
     }
 
-    nav a {
-        padding: 9px 12px;
-        font-size: 13px;
+    /* As quatro imagens ficam iguais também no celular */
+    .imagens-sucos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .imagem-suco {
+        width: 100%;
+        height: 280px;
+    }
+
+    .sabores-sucos {
+        padding: 22px 14px;
+    }
+
+    .lista-sabores span {
+        padding: 0 2px;
     }
 }
-
