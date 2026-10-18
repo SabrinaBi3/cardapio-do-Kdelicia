@@ -1,52 +1,95 @@
 
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kdelícia | Cardápio</title>
+
+    <title>K Delícia Lanches | Cardápio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- CABEÇALHO E LOGO PROVISÓRIA -->
+    <!-- CABEÇALHO -->
     <header class="cabecalho">
 
-        <div class="logo-area">
-            <!-- LOGO FICTÍCIA: substitua pela oficial futuramente -->
-            <div class="logo-ficticia">
-                <span class="logo-k">K</span>
-                <div class="logo-texto">
-                    <span class="logo-nome">KDELÍCIA</span>
-                    <span class="logo-slogan">SABOR QUE CONQUISTA</span>
-                </div>
+        <div class="marca">
+            <img src="imagens/logo-kdelicia.png"
+                 alt="Logo K Delícia Lanches"
+                 class="logo">
+
+            <p class="frase-cabecalho">
+                Sabor que conquista!
+            </p>
+        </div>
+
+        <div class="contatos">
+            <p class="chamada-delivery">
+                Peça pelo
+                <strong>DELIVERY</strong>
+            </p>
+
+            <a class="contato whatsapp"
+               href="https://wa.me/5543996877836"
+               target="_blank"
+               rel="noopener">
+                <span class="icone">✆</span>
+                <span>
+                    <small>WhatsApp</small>
+                    <strong>(43) 99687-7836</strong>
+                </span>
+            </a>
+
+            <a class="contato instagram"
+               href="https://instagram.com/kdelicia.lanche"
+               target="_blank"
+               rel="noopener">
+                <span class="icone">◎</span>
+                <span>
+                    <small>Instagram</small>
+                    <strong>@kdelicia.lanche</strong>
+                </span>
+            </a>
+
+            <div class="contato endereco">
+                <span class="icone">⌖</span>
+                <span>
+                    <small>Nosso endereço</small>
+                    <strong>Rua Sertanópolis, 535<br>Ivaiporã - PR</strong>
+                </span>
             </div>
         </div>
 
-        <p class="frase-cabecalho">O sabor que conquista!</p>
-
-        <nav>
-            <a href="#porcoes">Porções</a>
-            <a href="#doces">Hambúrgueres doces</a>
-            <a href="#sucos">Sucos</a>
-        </nav>
+        <div class="motoboy">
+            <div class="moto">🏍️</div>
+            <strong>Entrega rápida!</strong>
+            <span>Seu pedido vai até você.</span>
+        </div>
 
     </header>
 
-    <main>
 
-        <!-- ================= PORÇÕES ================= -->
-        <section class="cardapio porcoes" id="porcoes">
+    <main class="cardapio">
+
+        <!-- PORÇÕES -->
+        <section class="secao porcoes" id="porcoes">
 
             <div class="titulo">
-                <p class="subtitulo">PARA COMPARTILHAR</p>
+                <span class="subtitulo">PARA COMPARTILHAR</span>
                 <h2>Porções</h2>
-                <span>Petiscos deliciosos para todos os momentos!</span>
+                <p>Petiscos deliciosos para todos os momentos!</p>
+                <span class="decoracao">✦ ✦ ✦</span>
             </div>
 
-            <div class="produtos">
+            <div class="produtos tres">
 
                 <article class="produto">
                     <img src="imagens/batata-bacon.jpg"
@@ -54,8 +97,8 @@
 
                     <div class="informacoes">
                         <h3>Batata com queijo e bacon</h3>
-                        <p>Batata frita com queijo derretido, bacon e alface.</p>
-                        <strong>R$ 25,00</strong>
+                        <p>Batata frita com queijo derretido e bacon crocante.</p>
+                        <strong class="preco">R$ 25,00</strong>
                     </div>
                 </article>
 
@@ -66,7 +109,7 @@
                     <div class="informacoes">
                         <h3>Pão com calabresa</h3>
                         <p>Pão acompanhado de calabresa e alface.</p>
-                        <strong>R$ 18,00</strong>
+                        <strong class="preco">R$ 18,00</strong>
                     </div>
                 </article>
 
@@ -77,7 +120,7 @@
                     <div class="informacoes">
                         <h3>Tilápia</h3>
                         <p>Tilápia acompanhada de alface e limão.</p>
-                        <strong>R$ 35,00</strong>
+                        <strong class="preco">R$ 35,00</strong>
                     </div>
                 </article>
 
@@ -85,16 +128,17 @@
         </section>
 
 
-        <!-- ============== HAMBÚRGUERES DOCES ============== -->
-        <section class="cardapio doces" id="doces">
+        <!-- HAMBÚRGUERES DOCES -->
+        <section class="secao doces" id="doces">
 
             <div class="titulo">
-                <p class="subtitulo">UMA DOSE DE DOÇURA</p>
-                <h2>Hambúrgueres doces</h2>
-                <span>Combinações irresistíveis para adoçar seu dia!</span>
+                <span class="subtitulo">UMA DOSE DE DOÇURA</span>
+                <h2>Hambúrgueres <em>Doces</em></h2>
+                <p>Combinações irresistíveis para adoçar seu dia!</p>
+                <span class="decoracao">♥ ✦ ♥</span>
             </div>
 
-            <div class="produtos">
+            <div class="produtos quatro">
 
                 <article class="produto">
                     <img src="imagens/doce-pacoca.jpg"
@@ -103,7 +147,7 @@
                     <div class="informacoes">
                         <h3>Leite condensado com paçoca</h3>
                         <p>Leite condensado combinado com paçoca.</p>
-                        <strong>R$ 15,00</strong>
+                        <strong class="preco">R$ 15,00</strong>
                     </div>
                 </article>
 
@@ -114,7 +158,7 @@
                     <div class="informacoes">
                         <h3>Morango com chocolate</h3>
                         <p>Morango, leite condensado e chocolate.</p>
-                        <strong>R$ 18,00</strong>
+                        <strong class="preco">R$ 18,00</strong>
                     </div>
                 </article>
 
@@ -125,7 +169,7 @@
                     <div class="informacoes">
                         <h3>Banana com chocolate</h3>
                         <p>Banana com chocolate e calda de chocolate.</p>
-                        <strong>R$ 15,00</strong>
+                        <strong class="preco">R$ 15,00</strong>
                     </div>
                 </article>
 
@@ -136,7 +180,7 @@
                     <div class="informacoes">
                         <h3>Abacaxi com chocolate</h3>
                         <p>Abacaxi, chocolate em pó, calda de chocolate e leite condensado.</p>
-                        <strong>R$ 17,00</strong>
+                        <strong class="preco">R$ 17,00</strong>
                     </div>
                 </article>
 
@@ -144,68 +188,96 @@
         </section>
 
 
-        <!-- ================== SUCOS ================== -->
-        <section class="cardapio sucos" id="sucos">
+        <!-- SUCOS -->
+        <section class="secao sucos" id="sucos">
 
             <div class="titulo">
-                <p class="subtitulo">REFRESCÂNCIA A CADA GOLE</p>
+                <span class="subtitulo">REFRESCÂNCIA A CADA GOLE</span>
                 <h2>Sucos</h2>
-                <span>Escolha seu sabor favorito!</span>
+                <p>Escolha seu sabor favorito!</p>
+                <span class="decoracao">☼ ✦ ☼</span>
             </div>
 
-            <!-- Quatro imagens independentes, com tamanho igual -->
-            <div class="imagens-sucos">
+            <div class="conteudo-sucos">
 
-                <div class="imagem-suco">
-                    <img src="imagens/sucos-1.jpg"
-                         alt="Cardápio de sucos - imagem 1">
+                <div class="imagens-sucos">
+
+                    <div class="imagem-suco">
+                        <img src="imagens/sucos-1.jpg"
+                             alt="Imagem de sucos 1">
+                    </div>
+
+                    <div class="imagem-suco">
+                        <img src="imagens/sucos-2.jpg"
+                             alt="Imagem de sucos 2">
+                    </div>
+
+                    <div class="imagem-suco">
+                        <img src="imagens/sucos-3.jpg"
+                             alt="Imagem de sucos 3">
+                    </div>
+
+                    <div class="imagem-suco">
+                        <img src="imagens/sucos-4.jpg"
+                             alt="Imagem de sucos 4">
+                    </div>
+
                 </div>
 
-                <div class="imagem-suco">
-                    <img src="imagens/sucos-2.jpg"
-                         alt="Cardápio de sucos - imagem 2">
-                </div>
+                <div class="sabores-sucos">
+                    <h3>Sabores disponíveis</h3>
 
-                <div class="imagem-suco">
-                    <img src="imagens/sucos-3.jpg"
-                         alt="Cardápio de sucos - imagem 3">
-                </div>
+                    <p class="lista-sabores">
+                        Morango <span>•</span>
+                        Coco <span>•</span>
+                        Maracujá <span>•</span>
+                        Laranja <span>•</span>
+                        Uva
+                    </p>
 
-                <div class="imagem-suco">
-                    <img src="imagens/sucos-4.jpg"
-                         alt="Cardápio de sucos - imagem 4">
+                    <p class="opcoes-sucos">
+                        Disponíveis com água ou leite.
+                    </p>
+
+                    <strong class="preco preco-suco">R$ 12,00</strong>
                 </div>
 
             </div>
-
-            <div class="sabores-sucos">
-                <h3>Sabores disponíveis</h3>
-
-                <p class="lista-sabores">
-                    Morango <span>•</span>
-                    Coco <span>•</span>
-                    Maracujá <span>•</span>
-                    Laranja <span>•</span>
-                    Uva
-                </p>
-
-                <p>Disponíveis com água ou leite.</p>
-
-                <strong>R$ 12,00</strong>
-            </div>
-
         </section>
 
     </main>
 
 
     <!-- RODAPÉ -->
-    <footer>
-        <div class="logo-rodape">K<span>delícia</span></div>
-        <p>Obrigado pela preferência!</p>
+    <footer class="rodape">
+
+        <div class="logo-rodape">
+            K <span>Delícia</span>
+            <small>LANCHES</small>
+        </div>
+
+        <div class="mensagem-rodape">
+            <h3>Qualidade, sabor e muito mais para você!</h3>
+            <p>Obrigado pela preferência!</p>
+        </div>
+
+        <div class="beneficio">
+            <span>✦</span>
+            <p>Ingredientes<br>de qualidade</p>
+        </div>
+
+        <div class="beneficio">
+            <span>♡</span>
+            <p>Feito com<br>muito carinho</p>
+        </div>
+
+        <div class="beneficio">
+            <span>🏍</span>
+            <p>Entrega rápida<br>e segura</p>
+        </div>
+
     </footer>
 
 </body>
 </html>
-
 
