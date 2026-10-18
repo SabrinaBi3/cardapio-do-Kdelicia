@@ -1,1 +1,247 @@
+```css
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111111;
+    color: #f8f5ed;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #080808;
+    border-bottom: 4px solid #f58220;
+}
+
+.cabecalho h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 55px;
+    color: #ffd447;
+    text-transform: uppercase;
+}
+
+.cabecalho h1 span {
+    color: #ffffff;
+}
+
+.cabecalho p {
+    color: #cccccc;
+    margin: 8px 0 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background-color: #252525;
+    border: 1px solid #f58220;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #d83227;
+}
+
+/* TÍTULO PRINCIPAL DE CADA CARDÁPIO */
+
+.cardapio {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 35px;
+    background-color: #1a1a1a;
+    border-top: 5px solid #f58220;
+    border-radius: 8px;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo p {
+    color: #ffd447;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.titulo h2 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: #ffd447;
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.titulo span {
+    color: #cccccc;
+}
+
+/* ORGANIZAÇÃO DOS PRODUTOS */
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.produto {
+    background-color: #252525;
+    border: 1px solid #40382e;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.produto img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    background-color: #333333;
+}
+
+.informacoes {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.informacoes h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.informacoes p {
+    color: #cccccc;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.informacoes strong {
+    align-self: flex-start;
+    background-color: #d83227;
+    color: white;
+    padding: 9px 14px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* CARDÁPIO DE DOCES */
+
+.doces {
+    border-top-color: #d83227;
+}
+
+.doces .titulo h2 {
+    color: #ffb7ad;
+}
+
+/* CARDÁPIO DE SUCOS */
+
+.sucos {
+    border-top-color: #ffd447;
+}
+
+.sucos .produtos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sucos .produto img {
+    height: 180px;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #080808;
+    border-top: 2px solid #f58220;
+}
+
+footer h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    color: #ffd447;
+}
+
+footer p {
+    margin-top: 8px;
+    color: #cccccc;
+}
+
+/* TABLETS */
+
+@media (max-width: 850px) {
+    .cardapio {
+        margin: 25px 15px;
+        padding: 25px;
+    }
+
+    .produtos,
+    .sucos .produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 520px) {
+    .cabecalho h1 {
+        font-size: 42px;
+    }
+
+    .cardapio {
+        margin: 20px 10px;
+        padding: 20px 14px;
+    }
+
+    .titulo h2 {
+        font-size: 32px;
+    }
+
+    .produtos,
+    .sucos .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto img {
+        height: 220px;
+    }
+
+    nav a {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+}
+```
