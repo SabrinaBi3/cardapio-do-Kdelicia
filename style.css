@@ -1,4 +1,4 @@
-```css
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
 
 * {
@@ -166,19 +166,71 @@ nav a:hover {
     color: #ffb7ad;
 }
 
-/* CARDÁPIO DE SUCOS */
-
-.sucos {
-    border-top-color: #ffd447;
+```css
+/* IMAGENS DO CARDÁPIO DE SUCOS */
+.imagens-sucos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto;
 }
 
-.sucos .produtos {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.imagem-suco {
+    background-color: #222;
+    border: 2px solid #d87943;
+    border-radius: 15px;
+    padding: 10px;
+    overflow: hidden;
 }
 
-.sucos .produto img {
-    height: 180px;
+.imagem-suco img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    border-radius: 10px;
 }
+
+.sabores-sucos {
+    text-align: center;
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 800px;
+    background-color: #222;
+    border-radius: 15px;
+}
+
+.sabores-sucos h3 {
+    color: #d87943;
+    margin-bottom: 15px;
+}
+
+.sabores-sucos p {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.sabores-sucos strong {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffd166;
+    font-size: 1.2rem;
+}
+
+/* Adaptação para celular */
+@media (max-width: 650px) {
+    .imagens-sucos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .imagem-suco img {
+        height: auto;
+        max-height: 350px;
+    }
+}
+```
 
 /* RODAPÉ */
 
@@ -244,4 +296,4 @@ footer p {
         font-size: 13px;
     }
 }
-```
+
