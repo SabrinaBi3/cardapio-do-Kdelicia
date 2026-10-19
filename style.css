@@ -99,13 +99,14 @@ img {
 .logo {
     display: block;
     width: 100%;
-    max-width: 300px;
-    height: 125px;
+    max-width: 520px;
+    height: 220px;
     object-fit: contain;
     margin: 0 auto;
-
+    border-radius: 25px;
+   
     /* Integra a imagem ao fundo escuro */
-    background: transparent;
+   
     border: none;
     border-radius: 0;
     padding: 0;
